@@ -13,9 +13,9 @@ app.use("/theaters", theatersRouter);
 app.use("/movies", moviesRouter);
 app.use("/reviews", reviewsRouter);
 
-app.get("/", (req, res) => {
-  res.send("WeLoveMovies API!");
-});
+// app.get("/", (req, res) => {
+//   res.send("WeLoveMovies API!");
+// });
 
 app.use((req, res, next) => {
   next({ status: 404, message: `Not found: ${req.originalUrl}` });
